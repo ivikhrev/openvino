@@ -5,8 +5,6 @@ import os
 import sys
 from datetime import datetime
 
-from openvino.runtime import Dimension
-
 from openvino.tools.benchmark.benchmark import Benchmark
 from openvino.tools.benchmark.parameters import parse_args
 from openvino.tools.benchmark.utils.constants import MULTI_DEVICE_NAME, HETERO_DEVICE_NAME, CPU_DEVICE_NAME, \
@@ -17,12 +15,7 @@ from openvino.tools.benchmark.utils.progress_bar import ProgressBar
 from openvino.tools.benchmark.utils.utils import next_step, get_number_iterations, process_precision, \
     process_help_inference_string, print_perf_counters, dump_exec_graph, get_duration_in_milliseconds, \
     get_command_line_arguments, parse_nstreams_value_per_device, parse_devices, get_inputs_info, \
-<<<<<<< HEAD
-    print_inputs_and_outputs_info, get_network_batch_size, load_config, dump_config, get_latency_groups, \
-    check_for_static, can_measure_as_static
-=======
     print_inputs_and_outputs_info, get_batch_size, load_config, dump_config
->>>>>>> parent of f9bd7402f... [tools] new api and support dynamic models in python benchmark app (#8582)
 from openvino.tools.benchmark.utils.statistics_report import StatisticsReport, averageCntReport, detailedCntReport
 
 
